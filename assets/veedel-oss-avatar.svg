@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">Veedel OSS</title>
+  <style>
+    /* Colors: edit here */
+    .ink    { fill: #101A2B; }
+    .cream  { fill: #EDEAE3; }
+    .accent { fill: #E5384B; }
+    .muted  { fill: #9AA4B6; }
+  </style>
+  <!-- Background -->
+  <rect id="background" class="ink" width="512" height="512"/>
+  <!-- Mark, 300px, centered -->
+  <g id="mark" transform="translate(106 106)">
+    <!-- Mark: rounded square (r=72) split into four quarters, 142px each, 16px gap -->
+    <defs>
+      <clipPath id="clip"><rect width="300" height="300" rx="72"/></clipPath>
+    </defs>
+    <g id="quarters" clip-path="url(#clip)">
+      <rect id="quarter-top-left"     class="cream"  width="142" height="142" rx="10"/>
+      <rect id="quarter-top-right"    class="cream"  x="158" width="142" height="142" rx="10"/>
+      <rect id="quarter-bottom-left"  class="cream"  y="158" width="142" height="142" rx="10"/>
+      <rect id="quarter-bottom-right" class="accent" x="158" y="158" width="142" height="142" rx="10"/>
+    </g>
+    <!-- Cologne Cathedral: two spires, towers and nave, centered in the red quarter -->
+    <g id="dom" class="ink" stroke="#101A2B" stroke-width="3" stroke-linejoin="round" transform="translate(186 186) scale(0.85)">
+      <polygon id="spire-left"  points="16,50 27,4 38,50"/>
+      <polygon id="spire-right" points="62,50 73,4 84,50"/>
+      <rect id="tower-left"  x="16" y="50" width="22" height="46"/>
+      <rect id="tower-right" x="62" y="50" width="22" height="46"/>
+      <rect id="nave" x="38" y="70" width="24" height="26"/>
+      <polygon id="nave-roof" points="38,70 50,56 62,70"/>
+    </g>
+  </g>
+</svg>
